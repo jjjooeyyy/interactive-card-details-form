@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.left-section{
+    @apply 
+    bg-[url('/images/bg-main-mobile.png')] 
+    bg-cover bg-center
+    h-[35vh] w-full
+}
+
+.cards {
+    @apply 
+    flex flex-col-reverse
+    pt-[50px] pl-[40px]
+}
+
+.front-card {
+    @apply 
+    relative
+    w-[300px]
+    overflow-hidden
+    z-10
+    -top-[92px] left-14
+}
+
+
+.back-card {
+    @apply 
+    relative
+    w-[300px]
+    overflow-hidden
+    bottom-[20px] left-32
+}
+
+.right-section {
+    @apply 
+    mt-[6rem] mx-10
+}
