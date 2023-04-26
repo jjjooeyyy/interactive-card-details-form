@@ -7,12 +7,13 @@
 html {
     font-family: 'Space Grotesk', sans-serif;
     width: 100%;
+    height: 100%;
     font-size: 18px;
 }
 
 .container {
     @apply 
-    lg:flex
+    lg:flex lg:w-screen
 }
 
 .left-section{
@@ -55,5 +56,5 @@ html {
 .right-section {
     @apply 
     mt-[6rem] mx-10
-    lg:flex-row lg:mx-auto lg:my-auto
+    lg:flex-row lg:my-auto lg:items-center lg:justify-center 
 }
