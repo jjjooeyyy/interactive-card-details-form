@@ -524,8 +524,46 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
 .absolute{
   position: absolute;
+}
+
+.left-10{
+  left: 2.5rem;
 }
 
 .left-4{
@@ -534,10 +572,6 @@ video {
 
 .left-5{
   left: 1.25rem;
-}
-
-.left-8{
-  left: 2rem;
 }
 
 .right-10{
@@ -560,20 +594,28 @@ video {
   top: 1.25rem;
 }
 
-.top-\[70px\]{
-  top: 70px;
+.top-\[75px\]{
+  top: 75px;
+}
+
+.mt-6{
+  margin-top: 1.5rem;
 }
 
 .flex{
   display: flex;
 }
 
-.w-\[60px\]{
-  width: 60px;
+.w-14{
+  width: 3.5rem;
 }
 
-.w-3{
-  width: 0.75rem;
+.w-24{
+  width: 6rem;
+}
+
+.w-\[60px\]{
+  width: 60px;
 }
 
 .flex-row{
@@ -584,28 +626,24 @@ video {
   flex-direction: column;
 }
 
-.rounded{
-  border-radius: 0.25rem;
+.items-center{
+  align-items: center;
 }
 
-.rounded-sm{
-  border-radius: 0.125rem;
+.gap-3{
+  gap: 0.75rem;
+}
+
+.gap-8{
+  gap: 2rem;
 }
 
 .rounded-md{
   border-radius: 0.375rem;
 }
 
-.border{
-  border-width: 1px;
-}
-
 .border-2{
   border-width: 2px;
-}
-
-.border-s{
-  border-inline-start-width: 1px;
 }
 
 .border-solid{
@@ -617,43 +655,26 @@ video {
   border-color: hsl(279 6% 55% / var(--tw-border-opacity));
 }
 
-.p-5{
-  padding: 1.25rem;
+.bg-veryDarkViolet{
+  --tw-bg-opacity: 1;
+  background-color: hsl(278 68% 11% / var(--tw-bg-opacity));
 }
 
 .p-2{
   padding: 0.5rem;
 }
 
-.pt-2{
-  padding-top: 0.5rem;
-}
-
-.pt-3{
-  padding-top: 0.75rem;
-}
-
-.pt-4{
-  padding-top: 1rem;
+.p-3{
+  padding: 0.75rem;
 }
 
 .pt-5{
   padding-top: 1.25rem;
 }
 
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .text-xl{
@@ -678,54 +699,116 @@ video {
   color: hsl(270 3% 87% / var(--tw-text-opacity));
 }
 
-.text-white{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-veryDarkViolet{
   --tw-text-opacity: 1;
   color: hsl(278 68% 11% / var(--tw-text-opacity));
 }
 
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 html {
   font-family: 'Space Grotesk', sans-serif;
+  width: 100%;
+  font-size: 18px;
+}
+
+@media (min-width: 1024px){
+  .container{
+    display: flex;
+  }
 }
 
 .left-section{
-  height: 35vh;
-  width: 100%;
+  height: 30vh;
+  width: 100vw;
   background-image: url('/images/bg-main-mobile.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px){
+  .left-section{
+    background-image: url('/images/bg-main-desktop.png');
+  }
+}
+
+@media (min-width: 1024px){
+  .left-section{
+    height: 100vh;
+    width: 33.333333%;
+  }
 }
 
 .cards{
   display: flex;
   flex-direction: column-reverse;
   padding-top: 50px;
-  padding-left: 40px;
+  padding-left: 4rem;
+}
+
+@media (min-width: 1024px){
+  .cards{
+    flex-direction: column;
+  }
 }
 
 .front-card{
   position: relative;
-  top: -92px;
-  left: 3.5rem;
+  top: -112px;
+  left: 2rem;
   z-index: 10;
-  width: 300px;
+  width: 320px;
   overflow: hidden;
+}
+
+@media (min-width: 1024px){
+  .front-card{
+    left: 33.333333%;
+    top: 2.5rem;
+    width: 400px;
+  }
 }
 
 .back-card{
   position: relative;
-  bottom: 20px;
-  left: 8rem;
-  width: 300px;
+  bottom: 35px;
+  left: 5rem;
+  width: 320px;
   overflow: hidden;
+}
+
+@media (min-width: 1024px){
+  .back-card{
+    left: 50%;
+    bottom: -5rem;
+    width: 400px;
+  }
 }
 
 .right-section{
   margin-left: 2.5rem;
   margin-right: 2.5rem;
   margin-top: 6rem;
+}
+
+@media (min-width: 1024px){
+  .right-section{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-direction: row;
+  }
+
+  .lg\:top-28{
+    top: 7rem;
+  }
+
+  .lg\:top-40{
+    top: 10rem;
+  }
 }

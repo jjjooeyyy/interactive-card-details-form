@@ -16,20 +16,21 @@
 
 </head>
 <body>
+  <div class="container">
   <div class="left-section">
     <div class="cards">
 
 <div class="front-card">
-<img class="" src="/images/bg-card-front.png">
+<img src="/images/bg-card-front.png">
   <img class="absolute top-5 left-4 w-[60px]" src="/images/card-logo.svg">
-  <span class="absolute top-20 tracking-[3px] left-8 text-white"> 0000 0000 0000 0000</span>
-  <span class="absolute top-32 text-xs uppercase left-5 text-lightGrayishViolet"> Jane Appleseed </span>
-  <span class="absolute top-32 text-xs right-7 text-lightGrayishViolet"> 00/00 </span>
+  <span class="absolute top-20 tracking-[3px] left-10 text-white text-sm lg:top-28"> 0000 0000 0000 0000</span>
+  <span class="absolute top-32 text-sm uppercase left-5 text-lightGrayishViolet lg:top-40"> Jane Appleseed </span>
+  <span class="absolute top-32 text-sm right-7 text-lightGrayishViolet lg:top-40"> 00/00 </span>
 </div>
 
 <div class="back-card">
-<img class="" src="/images/bg-card-back.png">
-  <span class="absolute right-10 top-[70px] text-lightGrayishViolet">000</span>
+<img src="/images/bg-card-back.png">
+  <span class="absolute right-10 top-[75px] text-sm text-lightGrayishViolet">000</span>
   </div>
 
   </div>
@@ -46,23 +47,34 @@
   <label class="text-veryDarkViolet uppercase tracking-wide text-xl pt-5">
   <p>Card Number</p>
   </label>
-  <input class="border-solid border-darkGrayishViolet border-2 rounded-md p-2" placeholder="e.g. 1234 5678 9123 0000">
+  <input class="border-solid border-darkGrayishViolet border-2 rounded-md p-2" type="number" min="16" max="16" placeholder="e.g. 1234 5678 9123 0000">
  
+  <div class="flex flex-row gap-8">
+   <div class="flex flex-col">
   <label class="text-veryDarkViolet uppercase tracking-wide text-xl pt-5">
-  <p>Exp. Date (MM/YY)</p>
+  <p>Exp. Date</p> 
   </label>
-  <div class="flex flex-row">
-    <input class="border-solid border-darkGrayishViolet border-2 rounded-md p-2 w-3"
+  <div class="flex flex-row gap-3">
+    <input class="border-solid border-darkGrayishViolet border-2 rounded-md p-2 w-14" type="number" min="01" max="12" placeholder="MM">
+
+    <input class="border-solid border-darkGrayishViolet border-2 rounded-md p-2 w-14" type="number" min="23" max="28" placeholder="YY">
   </div>
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-  </form>
 </div>
+    <div class="flex flex-col">
+    <label class="text-veryDarkViolet uppercase tracking-wide text-xl pt-5">
+      <p>CVC</p>
+    </label>
+    <input class="border-solid border-darkGrayishViolet border-2 rounded-md p-2 w-24" type="number" min="000" max="999" placeholder="e.g. 123">
+    </div>
+</div>
+
+<button type="submit" class="bg-veryDarkViolet rounded-md text-white p-3 mt-6 items-center">Confirm</button>
+
+</div>
+  </form>
+
+</div>
+
   <!-- Completed state start 
 
   Thank you!
