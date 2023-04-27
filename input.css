@@ -71,7 +71,7 @@ html {
 
 .input-border {
     @apply
-    border-solid border-darkGrayishViolet border-2 rounded-md p-2
+    border-solid border-darkGrayishViolet border-2 rounded-md p-2 hover:border-purple-700
 }
 
 .label {
