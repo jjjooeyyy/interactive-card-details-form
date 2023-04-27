@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [My Solution](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw/hub)
 - Live Site URL: [Live site URL here](https://creditcard-info.netlify.app/)
 
 ## My process
