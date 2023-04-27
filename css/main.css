@@ -890,6 +890,7 @@ html {
   padding-right: 2.5rem;
   padding-top: 8rem;
   text-align: center;
+  display: none;
 }
 
 @media (min-width: 768px){

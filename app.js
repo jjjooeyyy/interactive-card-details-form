@@ -25,12 +25,20 @@ const errorMsgCVC = document.querySelector('.errorMsgCVC');
 
 const rightSection = document.querySelector('.right-section');
 const thankYouMsg = document.querySelector('.complete');
+
+
+// Regex check 
+const stringRegex = /^[a-zA-Z\s]*$/;
+const numRegex = /^\d{16}$/;
+const mmRegex = /^[1-9]$|^[1][0-2]$/;
+const yyRegex = /^[2][3-8]$/;
+const cvcRegex = /^[0-9]{3}$/;
+
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 
 // Input name validation
 const checkName = () =>{
-    const stringRegex = /^[a-zA-Z\s]*$/;
 if(inputName.value.match(stringRegex)) {
     errorMsgName.textContent = '';
     inputName.classList.remove('errorBorder');                    
@@ -48,7 +56,6 @@ if(!inputName.value) {
 
 // Input CardNum validation
 const checkCardNum = () => {
-    const numRegex = /^\d{16}$/;
 if(inputCardNum.value.match(numRegex)) {
     errorMsgNum.textContent = '';
     inputCardNum.classList.remove('errorBorder');
@@ -67,7 +74,6 @@ if(!inputCardNum.value) {
 
 // Input MM validation
 const checkInputMM = () => {
-    const mmRegex = /^[1-9]$|^[1][0-2]$/;
 if(inputMM.value.match(mmRegex)) {
     errorMsgMM.textContent = '';
     inputMM.classList.remove('errorBorder');
@@ -86,7 +92,6 @@ if(!inputMM.value){
 
 // Input YY validation
 const checkInputYY = () => {
-     const yyRegex = /^[2][3-8]$/;
 if(inputYY.value.match(yyRegex)) {
     errorMsgYY.textContent = '';
     inputYY.classList.remove('errorBorder');
@@ -105,7 +110,6 @@ if(!inputYY.value) {
 
 // Input CVC validation 
 const checkInputCVC = () => {
-     const cvcRegex = /^[0-9]{3}$/;
 if(inputCVC.value.match(cvcRegex)) {
     errorMsgCVC.textContent = '';
     inputCVC.classList.remove('errorBorder');
@@ -135,9 +139,54 @@ checkInputCVC();
 btn.addEventListener('click',function(e) {
 e.preventDefault();
 checkAll();
-if(inputName.value && inputCardNum.value && inputMM.value && inputYY.value && inputCVC.value) {
+// If all inputs are valid -> display thankyou msg
+if(inputName.value.match(stringRegex) && inputCardNum.value.match(numRegex) && inputMM.value.match(mmRegex) && inputYY.value.match(yyRegex) && inputCVC.value.match(cvcRegex)) {
 rightSection.classList.add('hidden');
 thankYouMsg.classList.remove('hidden');
 }
 })
+
+/////////////////////////////////////////////////////////////////////////////
+
+// Input and sync info on card img 
+
+//const updateName = () => {
+    inputName.addEventListener('input',function() {
+        if(!this.value) {
+            return holderName.innerText = `Jane Appleseed`;
+        } 
+        holderName.innerText = `${inputName.value}`
+    })
+//}
+
+    inputCardNum.addEventListener('input',function() {
+        if(!this.value) {
+            return cardNum.innerText = `0000 0000 0000 0000`;
+        }
+        // \d{4})/g = match every group of 4 digits, and add a space ("$1 ")
+        cardNum.innerText = `${inputCardNum.value}`.replace(/(\d{4})/g, '$1 ');
+    })
+
+    inputMM.addEventListener('input',function() {
+        if(!this.value) {
+            return expDate.innerText = `00/00`;
+        }
+        expDate.innerText = `${inputMM.value}/${inputYY.value}`;
+    })
+
+    inputYY.addEventListener('input',function() {
+        if(!this.value) {
+            return expDate.innerText = `00/00`;
+        }
+        expDate.innerText = `${inputMM.value}/${inputYY.value}`;
+    })
+
+    inputCVC.addEventListener('input',function() {
+        if(!this.value) {
+            return cvc.innerText = `000`;
+        } 
+        cvc.innerText = `${inputCVC.value}`;
+    })
+
+   
 

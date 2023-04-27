@@ -24,7 +24,7 @@
   <img class="absolute top-5 left-4 w-[60px]" src="/images/card-logo.svg">
   <span class="absolute top-20 tracking-[3px] left-10 text-white text-sm lg:top-28" id="cardNum"> 0000 0000 0000 0000</span>
   <span class="absolute top-28 text-sm uppercase left-5 text-lightGrayishViolet lg:top-40" id="cardName"> Jane Appleseed </span>
-  <span class="absolute top-28 text-sm right-7 text-lightGrayishViolet lg:top-40" id="cardDate"> 00/00 </span>
+  <span class="absolute top-28 text-sm right-7 text-lightGrayishViolet lg:top-40" id="cardDate"> 00/00</span> 
 </div>
 
 <div class="back-card">
@@ -47,7 +47,7 @@
   <label class="label pt-5">
   <p>Card Number</p>
   </label>
-  <input class="input-border" type="text" placeholder="e.g. 1234 5678 9123 0000" id="inputCardNum">
+  <input class="input-border" type="text" placeholder="e.g. 1234 5678 9123 0000" id="inputCardNum" maxlength="16">
   <span class="errorMsgNum errorMsg"></span>
  
   <div class="flex flex-row gap-8">
@@ -56,8 +56,8 @@
   <p>Exp. Date</p> 
   </label>
   <div class="flex flex-row gap-3">
-    <input class="input-border w-14 lg:w-16" type="number" min="01" max="12" placeholder="MM" id="inputMM">
-    <input class="input-border w-14 lg:w-16" type="number" min="23" max="28" placeholder="YY" id="inputYY">
+    <input class="input-border w-14 lg:w-16" type="text" min="01" max="12" maxlength="2" placeholder="MM" id="inputMM">
+    <input class="input-border w-14 lg:w-16" type="text" min="23" max="28" maxlength="2" placeholder="YY" id="inputYY">
   </div>
   <span class="errorMsgMM errorMsg"></span>
   <span class="errorMsgYY errorMsg"></span>
@@ -67,7 +67,7 @@
     <label class="label pt-5">
       <p>CVC</p>
     </label>
-    <input class="input-border w-24 lg:w-60" type="text" min="000" max="999" placeholder="e.g. 123" id="inputCVC">
+    <input class="input-border w-24 lg:w-60" type="text" min="000" max="999" placeholder="e.g. 123" maxlength="3" id="inputCVC">
     <span class="errorMsgCVC errorMsg"></span>
     </div>
 </div>
