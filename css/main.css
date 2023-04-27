@@ -606,10 +606,6 @@ video {
   display: flex;
 }
 
-.hidden{
-  display: none;
-}
-
 .w-14{
   width: 3.5rem;
 }
@@ -836,6 +832,13 @@ html {
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.errorBorder{
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
 .date-cvc{

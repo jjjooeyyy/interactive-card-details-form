@@ -41,14 +41,14 @@
   <label class="label">
     <p>Cardholder Name</p>
   </label>
-  <input class="input-border" type="text" placeholder="e.g. Jane Appleseed" id="inputName" required>
-  <span class="errorMsg"></span>
+  <input class="input-border" type="text" placeholder="e.g. Jane Appleseed" id="inputName">
+  <span class="errorMsgName errorMsg"></span>
 
   <label class="label pt-5">
   <p>Card Number</p>
   </label>
-  <input class="input-border" type="text" placeholder="e.g. 1234 5678 9123 0000" id="inputCardNum" required>
-  <span class="errorMsg"></span>
+  <input class="input-border" type="text" placeholder="e.g. 1234 5678 9123 0000" id="inputCardNum">
+  <span class="errorMsgNum errorMsg"></span>
  
   <div class="flex flex-row gap-8">
    <div class="date-cvc">
@@ -56,17 +56,19 @@
   <p>Exp. Date</p> 
   </label>
   <div class="flex flex-row gap-3">
-    <input class="input-border w-14 lg:w-16" type="number" min="01" max="12" placeholder="MM" id="inputMM" required>
-    <input class="input-border w-14 lg:w-16" type="number" min="23" max="28" placeholder="YY" id="inputYY" required>
+    <input class="input-border w-14 lg:w-16" type="number" min="01" max="12" placeholder="MM" id="inputMM">
+    <input class="input-border w-14 lg:w-16" type="number" min="23" max="28" placeholder="YY" id="inputYY">
   </div>
-  <span class="errorMsg"></span>
+  <span class="errorMsgMM errorMsg"></span>
+  <span class="errorMsgYY errorMsg"></span>
 </div>
+
     <div class="date-cvc ">
     <label class="label pt-5">
       <p>CVC</p>
     </label>
-    <input class="input-border w-24 lg:w-60" type="text" min="000" max="999" placeholder="e.g. 123" id="inputCVC" required>
-    <span class="errorMsg"></span>
+    <input class="input-border w-24 lg:w-60" type="text" min="000" max="999" placeholder="e.g. 123" id="inputCVC">
+    <span class="errorMsgCVC errorMsg"></span>
     </div>
 </div>
 

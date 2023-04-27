@@ -84,6 +84,11 @@ html {
     text-red-500 text-sm pt-2
 }
 
+.errorBorder {
+    @apply 
+    border-red-500 border-solid border-2
+}
+
 .date-cvc {
     @apply
     flex flex-col
