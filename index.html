@@ -22,52 +22,55 @@
 <div class="front-card">
 <img src="/images/bg-card-front.png">
   <img class="absolute top-5 left-4 w-[60px]" src="/images/card-logo.svg">
-  <span class="absolute top-20 tracking-[3px] left-10 text-white text-sm lg:top-28"> 0000 0000 0000 0000</span>
-  <span class="absolute top-32 text-sm uppercase left-5 text-lightGrayishViolet lg:top-40"> Jane Appleseed </span>
-  <span class="absolute top-32 text-sm right-7 text-lightGrayishViolet lg:top-40"> 00/00 </span>
+  <span class="absolute top-20 tracking-[3px] left-10 text-white text-sm lg:top-28" id="cardNum"> 0000 0000 0000 0000</span>
+  <span class="absolute top-28 text-sm uppercase left-5 text-lightGrayishViolet lg:top-40" id="cardName"> Jane Appleseed </span>
+  <span class="absolute top-28 text-sm right-7 text-lightGrayishViolet lg:top-40" id="cardDate"> 00/00 </span>
 </div>
 
 <div class="back-card">
 <img src="/images/bg-card-back.png">
-  <span class="absolute right-10 top-[75px] text-sm text-lightGrayishViolet lg:top-[5.5rem]">000</span>
+  <span class="absolute right-10 top-[70px] text-sm text-lightGrayishViolet lg:top-[5.5rem]" id="cardCVC">000</span>
   </div>
 
   </div>
 </div>
 
 <div class="right-section">
-  <form class="flex flex-col md:mx-[5rem] md:pl-7 lg:mx-[14rem] md:my-auto">
+  <form class="form">
 
-  <label class="text-veryDarkViolet uppercase tracking-wide text-xl">
+  <label class="label">
     <p>Cardholder Name</p>
   </label>
-  <input class="border-solid border-darkGrayishViolet border-2 rounded-md p-2" type="text" placeholder="e.g. Jane Appleseed" required>
+  <input class="input-border" type="text" placeholder="e.g. Jane Appleseed" id="inputName" required>
+  <span class="errorMsg"></span>
 
-  <label class="text-veryDarkViolet uppercase tracking-wide text-xl pt-5">
+  <label class="label pt-5">
   <p>Card Number</p>
   </label>
-  <input class="border-solid border-darkGrayishViolet border-2 rounded-md p-2" type="number" min="16" max="16" placeholder="e.g. 1234 5678 9123 0000" required>
+  <input class="input-border" type="text" placeholder="e.g. 1234 5678 9123 0000" id="inputCardNum" required>
+  <span class="errorMsg"></span>
  
   <div class="flex flex-row gap-8">
-   <div class="flex flex-col">
-  <label class="text-veryDarkViolet uppercase tracking-wide text-xl pt-5">
+   <div class="date-cvc">
+  <label class="label pt-5">
   <p>Exp. Date</p> 
   </label>
   <div class="flex flex-row gap-3">
-    <input class="border-solid border-darkGrayishViolet border-2 rounded-md p-2 w-14 lg:w-16" type="number" min="01" max="12" placeholder="MM" required>
-
-    <input class="border-solid border-darkGrayishViolet border-2 rounded-md p-2 w-14 lg:w-16" type="number" min="23" max="28" placeholder="YY" required>
+    <input class="input-border w-14 lg:w-16" type="number" min="01" max="12" placeholder="MM" id="inputMM" required>
+    <input class="input-border w-14 lg:w-16" type="number" min="23" max="28" placeholder="YY" id="inputYY" required>
   </div>
+  <span class="errorMsg"></span>
 </div>
-    <div class="flex flex-col ">
-    <label class="text-veryDarkViolet uppercase tracking-wide text-xl pt-5">
+    <div class="date-cvc ">
+    <label class="label pt-5">
       <p>CVC</p>
     </label>
-    <input class="border-solid border-darkGrayishViolet border-2 rounded-md p-2 w-24 lg:w-60" type="text" min="000" max="999" placeholder="e.g. 123" required>
+    <input class="input-border w-24 lg:w-60" type="text" min="000" max="999" placeholder="e.g. 123" id="inputCVC" required>
+    <span class="errorMsg"></span>
     </div>
 </div>
 
-<button type="submit" class="bg-veryDarkViolet rounded-md text-white p-3 mt-6 items-center">Confirm</button>
+<button type="submit" class="bg-veryDarkViolet rounded-md text-white p-3 mt-6 items-center" id="submit">Confirm</button>
 
 </div>
   </form>
@@ -84,6 +87,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-
+<script src="/app.js"></script>
 </body>
 </html>
