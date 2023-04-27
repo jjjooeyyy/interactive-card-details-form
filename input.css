@@ -19,8 +19,8 @@ html {
 
 .left-section{
     @apply 
-    bg-[url('/images/bg-main-mobile.png')] 
-    md:bg-[url('/images/bg-main-desktop.png')]
+    bg-[url('images/bg-main-mobile.png')] 
+    md:bg-[url('images/bg-main-desktop.png')]
     bg-cover bg-center bg-no-repeat
     h-[30vh] w-full
     md:h-[100vh] md:w-1/3 
