@@ -562,10 +562,6 @@ video {
   position: absolute;
 }
 
-.relative{
-  position: relative;
-}
-
 .left-10{
   left: 2.5rem;
 }
@@ -622,12 +618,6 @@ video {
   width: 60px;
 }
 
-.appearance-none{
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
 .flex-row{
   flex-direction: row;
 }
@@ -640,20 +630,12 @@ video {
   align-items: center;
 }
 
-.justify-center{
-  justify-content: center;
-}
-
 .gap-3{
   gap: 0.75rem;
 }
 
 .gap-8{
   gap: 2rem;
-}
-
-.gap-10{
-  gap: 2.5rem;
 }
 
 .rounded-md{
@@ -734,7 +716,7 @@ html {
   font-size: 18px;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 768px){
   .container{
     display: flex;
     width: 100vw;
@@ -752,14 +734,9 @@ html {
 
 @media (min-width: 768px){
   .left-section{
-    background-image: url('/images/bg-main-desktop.png');
-  }
-}
-
-@media (min-width: 1024px){
-  .left-section{
     height: 100vh;
     width: 33.333333%;
+    background-image: url('/images/bg-main-desktop.png');
   }
 }
 
@@ -767,10 +744,9 @@ html {
   display: flex;
   flex-direction: column-reverse;
   padding-top: 50px;
-  padding-left: 4rem;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 768px){
   .cards{
     flex-direction: column;
   }
@@ -778,17 +754,24 @@ html {
 
 .front-card{
   position: relative;
-  top: -112px;
+  top: -115px;
   left: 2rem;
   z-index: 10;
   width: 320px;
   overflow: hidden;
 }
 
+@media (min-width: 768px){
+  .front-card{
+    left: 1rem;
+    top: 16rem;
+  }
+}
+
 @media (min-width: 1024px){
   .front-card{
     left: 33.333333%;
-    top: 2.5rem;
+    top: 11rem;
     width: 400px;
   }
 }
@@ -796,15 +779,22 @@ html {
 .back-card{
   position: relative;
   bottom: 35px;
-  left: 5rem;
+  left: 3.5rem;
   width: 320px;
   overflow: hidden;
+}
+
+@media (min-width: 768px){
+  .back-card{
+    left: 25%;
+    bottom: -17rem;
+  }
 }
 
 @media (min-width: 1024px){
   .back-card{
     left: 50%;
-    bottom: -5rem;
+    bottom: -13rem;
     width: 400px;
   }
 }
@@ -815,19 +805,32 @@ html {
   margin-top: 6rem;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 768px){
   .right-section{
     margin-top: auto;
     margin-bottom: auto;
+    width: 100vw;
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
 
-  .lg\:relative{
-    position: relative;
+  .md\:mx-\[5rem\]{
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 
+  .md\:my-auto{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .md\:pl-7{
+    padding-left: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px){
   .lg\:top-28{
     top: 7rem;
   }
@@ -840,109 +843,9 @@ html {
     top: 5.5rem;
   }
 
-  .lg\:mx-auto{
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .lg\:my-auto{
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-
-  .lg\:mx-\[25\%\]{
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-
-  .lg\:mx-\[50\%\]{
-    margin-left: 50%;
-    margin-right: 50%;
-  }
-
-  .lg\:mx-\[20rem\]{
-    margin-left: 20rem;
-    margin-right: 20rem;
-  }
-
-  .lg\:mx-\[50rem\]{
-    margin-left: 50rem;
-    margin-right: 50rem;
-  }
-
-  .lg\:mx-\[30rem\]{
-    margin-left: 30rem;
-    margin-right: 30rem;
-  }
-
-  .lg\:mx-\[25rem\]{
-    margin-left: 25rem;
-    margin-right: 25rem;
-  }
-
-  .lg\:mx-\[15rem\]{
-    margin-left: 15rem;
-    margin-right: 15rem;
-  }
-
-  .lg\:mx-\[10rem\]{
-    margin-left: 10rem;
-    margin-right: 10rem;
-  }
-
-  .lg\:mx-\[18rem\]{
-    margin-left: 18rem;
-    margin-right: 18rem;
-  }
-
-  .lg\:mx-\[13rem\]{
-    margin-left: 13rem;
-    margin-right: 13rem;
-  }
-
   .lg\:mx-\[14rem\]{
     margin-left: 14rem;
     margin-right: 14rem;
-  }
-
-  .lg\:w-full{
-    width: 100%;
-  }
-
-  .lg\:w-screen{
-    width: 100vw;
-  }
-
-  .lg\:w-\[80\%\]{
-    width: 80%;
-  }
-
-  .lg\:w-\[\]{
-    width: ;
-  }
-
-  .lg\:w-\[50\%\]{
-    width: 50%;
-  }
-
-  .lg\:w-32{
-    width: 8rem;
-  }
-
-  .lg\:w-40{
-    width: 10rem;
-  }
-
-  .lg\:w-5{
-    width: 1.25rem;
-  }
-
-  .lg\:w-56{
-    width: 14rem;
-  }
-
-  .lg\:w-1{
-    width: 0.25rem;
   }
 
   .lg\:w-16{
@@ -951,21 +854,5 @@ html {
 
   .lg\:w-60{
     width: 15rem;
-  }
-
-  .lg\:items-center{
-    align-items: center;
-  }
-
-  .lg\:justify-center{
-    justify-content: center;
-  }
-
-  .lg\:gap-10{
-    gap: 2.5rem;
-  }
-
-  .lg\:gap-12{
-    gap: 3rem;
   }
 }
