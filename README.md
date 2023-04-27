@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Live site URL here](creditcard-info.netlify.app)
+- Live Site URL: [Live site URL here](https://creditcard-info.netlify.app/)
 
 ## My process
 
