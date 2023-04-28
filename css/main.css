@@ -611,6 +611,10 @@ video {
   display: flex;
 }
 
+.hidden{
+  display: none;
+}
+
 .w-14{
   width: 3.5rem;
 }
