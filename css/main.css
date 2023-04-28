@@ -895,7 +895,6 @@ html {
   padding-right: 2.5rem;
   padding-top: 8rem;
   text-align: center;
-  display:none;
 }
 
 @media (min-width: 768px){
@@ -904,6 +903,8 @@ html {
     margin-bottom: 10rem;
     margin-left: 5rem;
     margin-right: 5rem;
+    width: 100%;
+    padding-top: 0px;
   }
 }
 

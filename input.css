@@ -96,10 +96,9 @@ html {
 
 .complete {
     @apply 
-    hidden
     flex-col text-center items-center
     pt-32 px-10
-    md:my-40 md:mx-20
+    md:my-40 md:mx-20 md:pt-0 md:w-full
     lg:mx-auto lg:my-52 lg:mr-32
 }
 

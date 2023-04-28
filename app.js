@@ -19,8 +19,9 @@ const holderName = document.getElementById("cardName"),
   errorMsgMM = document.querySelector(".errorMsgMM"),
   errorMsgYY = document.querySelector(".errorMsgYY"),
   errorMsgCVC = document.querySelector(".errorMsgCVC"),
-  rightSection = document.querySelector(".right-section"),
+  form = document.querySelector(".form"),
   thankYouMsg = document.querySelector(".complete"),
+  section = document.getElementsByTagName('section'),
   // Regex check
   stringRegex = /^[a-zA-Z\s]*$/,
   numRegex = /^\d{16}$/,
@@ -38,12 +39,12 @@ function checkName() {
     } else {
         errorMsgName.textContent = `Please enter letter only`;
         inputName.classList.add("errorBorder");
-        return false;
+       
     }
     if (!inputName.value) {
         errorMsgName.textContent = `Name can't be blank`;
         inputName.classList.add("errorBorder");
-        return false;
+       
     }
 }
 
@@ -55,12 +56,12 @@ function checkCardNum() {
     } else {
         errorMsgNum.textContent = `Please enter 16 digits of your card number`;
         inputCardNum.classList.add("errorBorder");
-        return false;
+       
     }
     if (!inputCardNum.value) {
         errorMsgNum.textContent = `Number can't be blank`;
         inputCardNum.classList.add("errorBorder");
-        return false;
+       
     }
 }
 
@@ -72,12 +73,12 @@ function checkInputMM() {
     } else {
         errorMsgMM.textContent = `Please enter valid month (1-12)`;
         inputMM.classList.add("errorBorder");
-        return false;
+       
     }
     if (!inputMM.value) {
         errorMsgMM.textContent = `Month can't be blank`;
         inputMM.classList.add("errorBorder");
-        return false;
+       
     }
 }
 
@@ -89,12 +90,12 @@ function checkInputYY() {
     } else {
         errorMsgYY.textContent = `Please enter a valid year (23-28)`;
         inputYY.classList.add("errorBorder");
-        return false;
+       
     }
     if (!inputYY.value) {
         errorMsgYY.textContent = `Year can't be blank`;
         inputYY.classList.add("errorBorder");
-        return false;
+       
     }
 }
 
@@ -106,12 +107,12 @@ function checkInputCVC() {
     } else {
         errorMsgCVC.textContent = `Please enter valid CVC (000-999)`;
         inputCVC.classList.add("errorBorder");
-        return false;
+       
     }
     if (!inputCVC.value) {
         errorMsgCVC.textContent = `CVC can't be blank`;
         inputCVC.classList.add("errorBorder");
-        return false;
+       
     }
 }
 
@@ -136,7 +137,7 @@ btn.addEventListener("click", function (e) {
     inputYY.value.match(yyRegex) &&
     inputCVC.value.match(cvcRegex)
   ) {
-    rightSection.classList.add("hidden");
+    form.classList.add("hidden");
     thankYouMsg.classList.remove("hidden");
   }
 });
